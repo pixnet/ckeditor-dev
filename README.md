@@ -10,6 +10,19 @@ because the user experience will be very limited. For that purpose, you should
 either build the editor (see below) or use an official release available on the
 [CKEditor website](http://ckeditor.com).
 
+## For PIXNET
+
+為了符合 PIXNET 使用，PIXNET 自行修改/新增了以下部分
+  - **plugins** &ndash; [confighelper](https://github.com/AlfonsoML/confighelper)
+  - **skins** &ndash; [minimalist](https://github.com/albatrossdigital/ckeditor-skin-minimalist)
+  - **Makefile** &ndash; 新增 makefile
+  - **grunt task** &ndash; 新增 concat:lang Task 處理把 dist 內部的 ckeditor.js 跟 lang/*.js conat 成一份檔案
+  - **dist** &ndash; 新增 dist 資料夾，存放 release 檔案
+  - **bower** &ndash; 新增 bower.json，並確認只有 dist 底下資訊被 publish
+
+建置檔案
+  - 修改/新增 完畢後，下 make 後會自動 build 出新的 dist 目錄
+
 ## Code Installation
 
 There is no special installation procedure to install the development code.
