@@ -9,6 +9,6 @@
   "private": true,
   "ignore": [
     "**/*",
-    "!dist"
+    "!dist/**/*"
   ]
 }
