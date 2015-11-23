@@ -130,3 +130,31 @@ a > img {
 	border: none;
 	outline: 1px solid #0782C1;
 }
+
+/* PIXNET CUSTOM STYLE */
+body {
+	background-color: #f2f4fa;
+}
+
+body:focus {
+	background-color: #fff;
+}
+
+/* For plugins in editor */
+.redactor-plugins__pix-more,
+.redactor-plugins__pix-next-page {
+	width: 100%;
+	height: 12px;
+	margin-top: 15px;
+	border-top: 1px dotted #d2d9e7;
+	background-position: 100%;
+	background-repeat: no-repeat;
+}
+
+.redactor-plugins__pix-more {
+	background-image: url("/img/editor/more.gif");
+}
+
+.redactor-plugins__pix-next-page {
+	background-image: url("/img/editor/nextpageIcon.gif");
+}
