@@ -13,7 +13,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 .cke_dialog_body .cke_dialog_footer {
   background: none;
   border: none;
-  box-shadow: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
 
 .cke_combo_button {
@@ -21,7 +21,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 }
 
 .cke_chrome {
-  border-top: 1px solid #ccc;
+  /*border-top: 1px solid #ccc;*/
   border-bottom: 1px solid #ccc;
 }
 
@@ -29,4 +29,27 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 .cke_combo_button:hover,
 .cke_bottom:hover {
   /*background: #eee;*/
+}
+
+/* PIXNET CUSTOM STYLES */
+.cke_inner {
+	background: #f2f4fa;
+}
+.cke_top {
+	position: relative;
+	left: 0;
+	right: 0;
+	background: #f2f4fa;
+	border-bottom: 1px solid #ccc;
+}
+
+/* Disable pixmore & pixplugins icon for text button */
+.cke_button__pixplugins_label,
+.cke_button__pixmore_label {
+	display: inline
+}
+
+.cke_button__pixplugins_icon,
+.cke_button__pixmore_icon {
+	display: none;
 }
