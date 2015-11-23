@@ -98,13 +98,6 @@ module.exports = function( grunt ) {
 				},
 				src: samplesFrameworkJsFiles,
 				dest: 'samples/js/sf.js'
-			},
-			lang: {
-				options: {
-					separator: ';'
-				},
-				src: ['dist/ckeditor/ckeditor.js', 'dist/ckeditor/lang/*.js'],
-				dest: 'dist/ckeditor/ckeditor.js'
 			}
 		}
 	} );
