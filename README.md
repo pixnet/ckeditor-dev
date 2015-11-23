@@ -12,7 +12,8 @@ either build the editor (see below) or use an official release available on the
 
 ## For PIXNET
 
-為了符合 PIXNET 使用，PIXNET 自行修改/新增了以下部分
+為了符合 PIXNET 使用，PIXNET 自行修改/新增了以下部分：
+
   - **plugins** &ndash; [confighelper](https://github.com/AlfonsoML/confighelper)
   - **skins** &ndash; [minimalist](https://github.com/albatrossdigital/ckeditor-skin-minimalist)
   - **Makefile** &ndash; 新增 makefile
@@ -20,7 +21,11 @@ either build the editor (see below) or use an official release available on the
   - **dist** &ndash; 新增 dist 資料夾，存放 release 檔案
   - **bower** &ndash; 新增 bower.json，並確認只有 dist 底下資訊被 publish
 
-建置檔案
+新增/修改 Styles：
+  - skins/*.css: 可直接修改
+  - content.css: 可直接修改
+
+建置檔案：
   - 修改/新增 完畢後，下 make 後會自動 build 出新的 dist 目錄
 
 ## Code Installation
