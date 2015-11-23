@@ -4,3 +4,4 @@ all:
 	mv dev/builder/release/ckeditor dist
 	npm install
 	grunt concat:lang
+

@@ -13,8 +13,8 @@ module.exports = function( grunt ) {
 				options: {
 					separator: ';'
 				},
-				src: [ 'dist/ckeditor/ckeditor.js', 'dist/ckeditor/lang/*.js' ],
-				dest: 'dist/ckeditor/ckeditor.js'
+				src: [ 'dist/ckeditor.js', 'dist/lang/*.js' ],
+				dest: 'dist/ckeditor.js'
 			}
 		}
 	} );
