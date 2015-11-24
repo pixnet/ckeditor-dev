@@ -28,6 +28,8 @@ either build the editor (see below) or use an official release available on the
 建置檔案：
   - 修改/新增 完畢後，下 make 後會自動 build 出新的 dist 目錄
 
+**新增修改的 CHANGES LOG 請記得更新在 CHANGES_PIXNET.md**
+
 ## Code Installation
 
 There is no special installation procedure to install the development code.
