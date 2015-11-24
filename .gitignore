@@ -24,3 +24,9 @@ tests/plugins/mathjax/_assets/mathjax/**
 *.css.map
 
 bender-*.log
+
+dist/Makefile
+dist/adapters/**
+dist/samples/**
+dist/LICENSE.md
+dist/bower.json
