@@ -9,11 +9,11 @@
 module.exports = function( grunt ) {
 	grunt.config.merge( {
 		concat: {
-			lang: {
+			sources: {
 				options: {
 					separator: ';'
 				},
-				src: [ 'dist/ckeditor.js', 'dist/lang/*.js' ],
+				src: [ 'dist/ckeditor.js', 'dist/lang/*.js', 'dist/styles.js' ],
 				dest: 'dist/ckeditor.js'
 			}
 		}
