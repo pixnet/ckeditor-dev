@@ -39,6 +39,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 	position: relative;
 	left: 0;
 	right: 0;
+	z-index: 5;
 	background: #f2f4fa;
 	border-bottom: 1px solid #ccc;
 }
