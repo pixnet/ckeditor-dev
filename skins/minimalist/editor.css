@@ -44,6 +44,10 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 	border-bottom: 1px solid #ccc;
 }
 
+.cke_editor_pix-ckeditor {
+	margin-bottom: 65px;
+}
+
 /* Disable pixmore & pixplugins icon for text button */
 .cke_button__pixplugins_label,
 .cke_button__pixmore_label {
