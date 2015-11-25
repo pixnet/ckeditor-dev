@@ -60,7 +60,6 @@ var CKBUILDER_CONFIG = {
 		pastefromword: 1,
 		pastetext: 1,
 		removeformat: 1,
-		resize: 1,
 		showborders: 1,
 		smiley: 1,
 		sourcearea: 1,
