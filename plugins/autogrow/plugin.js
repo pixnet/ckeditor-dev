@@ -57,7 +57,7 @@
 							return;
 						}
 
-						resizeEditor();
+						resizeEditor(evt);
 
 						// Second pass to make correction upon the first resize, e.g. scrollbar.
 						// If height is unlimited vertical scrollbar was removed in the first
@@ -74,8 +74,9 @@
 			if ( evt.data.name == 'maximize' && evt.editor.mode == 'wysiwyg' ) {
 				if ( evt.data.command.state == CKEDITOR.TRISTATE_ON )
 					scrollable.removeStyle( 'overflow-y' );
-				else
-					resizeEditor();
+				else {
+					resizeEditor(evt);
+				}
 			}
 		} );
 
@@ -118,7 +119,7 @@
 			return height;
 		}
 
-		function resizeEditor() {
+		function resizeEditor(evt) {
 			// Hide scroll because we won't need it at all.
 			// Thanks to that we'll need only one resizeEditor() call per change.
 			if ( maxHeightIsUnlimited )
@@ -135,7 +136,7 @@
 			// #10196 Do not resize editor if new height is equal
 			// to the one set by previous resizeEditor() call.
 			if ( newHeight != currentHeight && lastHeight != newHeight ) {
-				newHeight = editor.fire( 'autoGrow', { currentHeight: currentHeight, newHeight: newHeight } ).newHeight;
+				newHeight = editor.fire( 'autoGrow', { currentHeight: currentHeight, newHeight: newHeight, evt: evt } ).newHeight;
 				editor.resize( editor.container.getStyle( 'width' ), newHeight, true );
 				lastHeight = newHeight;
 			}
