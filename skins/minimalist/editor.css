@@ -31,6 +31,10 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
   /*background: #eee;*/
 }
 
+.cke_panel_listItem a {
+	background-color: #fff;
+}
+
 /* PIXNET CUSTOM STYLES */
 .cke_inner {
 	background: #f2f4fa;
