@@ -2,7 +2,7 @@ PIXNET CKEditor Changelog
 ====================
 ## pixnet-0.0.7
 
-修改 contents.css 樣式：
+修改 dialog.css 樣式：
 * 修改 .cke_dark_background 背景色為透明色
 
 修改 editor.css 樣式
