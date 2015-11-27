@@ -1,5 +1,14 @@
 PIXNET CKEditor Changelog
 ====================
+## pixnet-0.0.7
+
+修改 contents.css 樣式：
+* 修改 .cke_dark_background 背景色為透明色
+
+修改 editor.css 樣式
+* 修改 .cke_panel_listItem a 背景色為白色，確保不會吃到 content.css body color
+* 增加 .cke_button_disabled 樣式，確保文字按鈕也有 disabled 樣式
+
 ## pixnet-0.0.6
 
 修改 contents.css 樣式：
