@@ -1,5 +1,10 @@
 PIXNET CKEditor Changelog
 ====================
+## pixnet-0.0.6
+
+修改 contents.css 樣式：
+* 修改 pixMore 跟 pixNextPage plugins 的 class name，移除 redactor 字眼
+
 ## pixnet-0.0.5
 
 移除 plugins:
