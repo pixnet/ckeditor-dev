@@ -141,8 +141,8 @@ body:focus {
 }
 
 /* For plugins in editor */
-.redactor-plugins__pix-more,
-.redactor-plugins__pix-next-page {
+.editor-plugins__pix-more,
+.editor-plugins__pix-next-page {
 	width: 100%;
 	height: 12px;
 	margin-top: 15px;
@@ -151,10 +151,10 @@ body:focus {
 	background-repeat: no-repeat;
 }
 
-.redactor-plugins__pix-more {
+.editor-plugins__pix-more {
 	background-image: url("/img/editor/more.gif");
 }
 
-.redactor-plugins__pix-next-page {
+.editor-plugins__pix-next-page {
 	background-image: url("/img/editor/nextpageIcon.gif");
 }
