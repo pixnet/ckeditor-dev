@@ -6,7 +6,7 @@
 /* exported CKBUILDER_CONFIG */
 
 var CKBUILDER_CONFIG = {
-	skin: 'minimalist',
+	skin: 'moono',
 	languages: {'zh': 1, 'en': 1},
 	ignore: [
 		'bender.js',
