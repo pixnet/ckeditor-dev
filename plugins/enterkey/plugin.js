@@ -47,7 +47,9 @@
 			range = replaceRangeWithClosestEditableRoot( range );
 
 			var doc = range.document;
-
+			var requestAnimationFrame = window.requestAnimationFrame || function(fn) {
+					return window.setTimeout(fn, 1000/60);
+				};
 			var atBlockStart = range.checkStartOfBlock(),
 				atBlockEnd = range.checkEndOfBlock(),
 				path = editor.elementPath( range.startContainer ),
@@ -403,8 +405,10 @@
 				range.moveToElementEditStart( isStartOfBlock && !isEndOfBlock ? nextBlock : newBlock );
 			}
 
-			range.select();
-			range.scrollIntoView();
+			requestAnimationFrame(function () {
+				range.select();
+				range.scrollIntoView();
+			});
 		},
 
 		enterBr: function( editor, mode, range, forceMode ) {
