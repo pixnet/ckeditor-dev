@@ -49,6 +49,10 @@
 		var eventsList = { contentDom: 1, key: 1, selectionChange: 1, insertElement: 1, mode: 1 };
 		for ( var eventName in eventsList ) {
 			editor.on( eventName, function( evt ) {
+				// skip composition key code (229) for fixing bug #13781 (skip busy typing)
+				if ('key' === evt.name && 229 === evt.data.keyCode) {
+					return;
+				}
 				// Some time is required for insertHtml, and it gives other events better performance as well.
 				if ( evt.editor.mode == 'wysiwyg' ) {
 					setTimeout( function() {
