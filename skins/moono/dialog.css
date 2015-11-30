@@ -790,7 +790,7 @@ select.cke_dialog_ui_input_select
  */
 .cke_dialog .cke_dark_background
 {
-	background-color: #DEDEDE;
+	background-color: transparent;
 }
 
 .cke_dialog .cke_light_background
