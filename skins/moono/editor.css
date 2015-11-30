@@ -67,3 +67,108 @@ legend.cke_voice_label
 {
 	display: none;
 }
+
+.cke_toolgroup {
+	float: left;
+	margin: 0 6px 5px 0;
+	border: 1px solid #a6a6a6;
+	border-bottom-color: #979797;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 0 2px rgba(255, 255, 255, .15) inset, 0 1px 0 rgba(255, 255, 255, .15) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 0 2px rgba(255, 255, 255, .15) inset, 0 1px 0 rgba(255, 255, 255, .15) inset;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 0 2px rgba(255, 255, 255, .15) inset, 0 1px 0 rgba(255, 255, 255, .15) inset;
+	background: #e4e4e4;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e4e4e4));
+	background-image: -moz-linear-gradient(top, #fff, #e4e4e4);
+	background-image: -webkit-linear-gradient(top, #fff, #e4e4e4);
+	background-image: -o-linear-gradient(top, #fff, #e4e4e4);
+	background-image: -ms-linear-gradient(top, #fff, #e4e4e4);
+	background-image: linear-gradient(top, #fff, #e4e4e4);
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#ffffff', endColorstr='#e4e4e4')
+}
+
+.cke_hc .cke_toolgroup {
+	border: 0;
+	margin-right: 10px;
+	margin-bottom: 10px
+}
+
+.cke_rtl .cke_toolgroup {
+	float: right;
+	margin-left: 6px;
+	margin-right: 0
+}
+
+.cke_chrome,
+.cke_top,
+.cke_toolgroup,
+a.cke_combo_button,
+.cke_bottom,
+.cke_dialog_body .cke_dialog_title,
+.cke_dialog_body .cke_dialog_footer {
+	background: none;
+	border: none;
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+.cke_combo_button {
+	/*border: 1px solid #efefef;*/
+}
+
+.cke_chrome {
+	/*border-top: 1px solid #ccc;*/
+	border-bottom: 1px solid #ccc;
+}
+
+.cke_toolgroup:hover,
+.cke_combo_button:hover,
+.cke_bottom:hover {
+	/*background: #eee;*/
+}
+
+.cke_panel_listItem a {
+	background-color: #fff;
+}
+
+.cke_button_disabled {
+	opacity: 0.3;
+}
+
+/* PIXNET CUSTOM STYLES */
+.cke_inner {
+	background: #f2f4fa;
+}
+.cke_top {
+	position: relative;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	background: #f2f4fa;
+	border-bottom: 1px solid #ccc;
+}
+
+.cke_editor_pix-ckeditor {
+	margin-bottom: 65px;
+}
+
+/* Disable pixmore & pixplugins icon for text button */
+.cke_button__pixplugins_label,
+.cke_button__pixmore_label {
+	display: inline;
+}
+
+.cke_button__pixplugins_icon,
+.cke_button__pixmore_icon {
+	display: none;
+}
+
+/* add plugins icon styles */
+.cke_button__addimages_icon {
+	background: url(icons.png) no-repeat 0 -504px !important
+}
+.cke_hidpi .cke_button__addimages_icon {
+	background: url(icons_hidpi.png) no-repeat 0 -504px !important;
+	background-size: 16px !important
+}
