@@ -1,6 +1,8 @@
 PIXNET CKEditor Changelog
 ====================
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
+## pixnet-0.0.9
+* 修改 plugin/autogrow/plugin.js, skip busy composition typing (229) for improve IE performance
 
 ## pixnet-0.0.8
 * skin 切換成 moono，因為 minimalist skin 沒有自動把更新過的 icons sprite.png 的 position 更新到 ie/gecko.css 檔案裡。造成 IE 跟 FireFox 破圖。
