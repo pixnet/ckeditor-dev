@@ -1,6 +1,10 @@
 PIXNET CKEditor Changelog
 ====================
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
+
+## pixnet-0.0.10
+* 修改 plugin/enterkey/plugin.js，增加 requestAnimationFrame 增加效能
+
 ## pixnet-0.0.9
 * 修改 plugin/autogrow/plugin.js, skip busy composition typing (229) for improve IE performance
 
