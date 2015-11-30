@@ -1,5 +1,8 @@
 PIXNET CKEditor Changelog
 ====================
+## pixnet-0.0.8
+* skin 切換成 moono，因為 minimalist skin 沒有自動把更新過的 icons sprite.png 的 position 更新到 ie/gecko.css 檔案裡。造成 IE 跟 FireFox 破圖。
+
 ## pixnet-0.0.7
 
 修改 dialog.css 樣式：
