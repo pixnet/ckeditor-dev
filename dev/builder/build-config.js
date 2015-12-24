@@ -36,7 +36,6 @@ var CKBUILDER_CONFIG = {
 		autogrow: 1,
 		basicstyles: 1,
 		clipboard: 1,
-		codemirror: 1,
 		colorbutton: 1,
 		contextmenu: 1,
 		confighelper: 1,
