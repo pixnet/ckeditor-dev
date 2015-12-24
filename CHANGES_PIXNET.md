@@ -4,6 +4,7 @@ PIXNET CKEditor Changelog
 
 ## pixnet-0.0.11
 * 修改 plugin/uploadimage/plugin.js，在 editor paste listener 被觸發的時候 trigger editor focus，確保 editor value start 更新。解決當 editor 沒有 value 上傳圖片後，confighelper/placeholder 把圖片的 HTML 清空的問題。
+* 移除 CodeMirror Plugin
 
 ## pixnet-0.0.10
 * 修改 plugin/enterkey/plugin.js，增加 requestAnimationFrame 增加效能
