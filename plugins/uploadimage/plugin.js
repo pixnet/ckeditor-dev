@@ -73,8 +73,6 @@
 					tempDoc = document.implementation.createHTMLDocument( '' ),
 					temp = new CKEDITOR.dom.element( tempDoc.body ),
 					imgs, img, i;
-				// focus editor make sure data is updating
-				editor.focus();
 				// Without this isReadOnly will not works properly.
 				temp.data( 'cke-editable', 1 );
 

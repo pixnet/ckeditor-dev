@@ -1,6 +1,6 @@
 /**
  * @file Configuration helper plugin for CKEditor
- * Copyright (C) 2012 Alfonso Martínez de Lizarrondo
+ * Copyright (C) 2012 Alfonso Martez de Lizarrondo
  *
  */
 (function() {
@@ -198,6 +198,7 @@ CKEDITOR.plugins.add( 'confighelper',
 			editor.on('mode', addPlaceholder, null, placeholder);
 			editor.on('contentDom', addPlaceholder, null, placeholder);
 
+			editor.on('paste', removePlaceholder);
 			editor.on('focus', removePlaceholder);
 			editor.on('beforeModeUnload', removePlaceholder);
 		} // Placeholder - End
