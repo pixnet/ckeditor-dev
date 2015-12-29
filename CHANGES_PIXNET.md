@@ -5,6 +5,7 @@ PIXNET CKEditor Changelog
 ## pixnet-0.0.12
 * 修改 plugin/confighelper/plugin.js，增加當使用者 paste 的時候，會去 toggle removePlaceholder method。（fixed 當沒有內容時候上傳圖片會把 html 洗掉的問題）
 * revert pixnet-0.0.11 在 uploadimage plugin.js 中的修改，改用上述 listen paste event 方法解決。
+* 修改 plugin/clipboard/plugin.js 的 htmlifiedTextHtmlification method，不把全行空白移除。
 
 ## pixnet-0.0.11
 * 修改 plugin/uploadimage/plugin.js，在 editor paste listener 被觸發的時候 trigger editor focus，確保 editor value start 更新。解決當 editor 沒有 value 上傳圖片後，confighelper/placeholder 把圖片的 HTML 清空的問題。

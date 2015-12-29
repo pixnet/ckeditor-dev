@@ -1130,7 +1130,8 @@
 		}
 
 			// Replace adjacent white-spaces (EOLs too - Fx sometimes keeps them) with one space.
-		data = data.replace( /\s+/g, ' ' )
+			// We are not using \s because we don't want "non-breaking spaces" and Chinese white space (\u3000) to be caught.
+		data = data.replace( /[ \f\n\r\t\v​]+/g, ' ' )
 			// Remove spaces from between tags.
 			.replace( /> +</g, '><' )
 			// Normalize XHTML syntax and upper cased <br> tags.
