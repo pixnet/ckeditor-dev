@@ -3,7 +3,8 @@ PIXNET CKEditor Changelog
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
 
 ## pixnet-0.0.12
-* 修改 plugin/confighelper/plugin.js，增加當使用者 paste 的時候，會去 toggle removePlaceholder method。（fixed 當沒有內容時候上傳圖片會把 html 洗掉的問題）
+* 修改 plugin/confighelper/plugin.js，增加當使用者 paste 的時候，會去 trigger removePlaceholder method。
+ （fixed 當沒有內容時候上傳圖片會把 html 洗掉的問題）
 * revert pixnet-0.0.11 在 uploadimage plugin.js 中的修改，改用上述 listen paste event 方法解決。
 * 修改 plugin/clipboard/plugin.js 的 htmlifiedTextHtmlification method，不把全行空白移除。
 
