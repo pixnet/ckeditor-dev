@@ -166,9 +166,9 @@ a.cke_combo_button,
 
 /* add plugins icon styles */
 .cke_button__addimages_icon {
-	background: url(icons.png) no-repeat 0 -504px !important
+	background: url(icons.png) no-repeat 0 -384px !important
 }
 .cke_hidpi .cke_button__addimages_icon {
-	background: url(icons_hidpi.png) no-repeat 0 -504px !important;
+	background: url(icons_hidpi.png) no-repeat 0 -384px !important;
 	background-size: 16px !important
 }
