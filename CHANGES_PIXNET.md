@@ -2,6 +2,10 @@ PIXNET CKEditor Changelog
 ====================
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
 
+## pixnet-0.0.14
+* 新增 [image2](http://ckeditor.com/addon/image2) plugin
+* 修改 image2 plugin，增加可編輯圖片標題
+
 ## pixnet-0.0.13
 * 更新 skin/moono/editor.css 的 .cke_button__addimages_icon (PIXNET 新增圖片) 位置
 
