@@ -433,6 +433,17 @@ CKEDITOR.dialog.add( 'image2', function( editor ) {
 						}
 					},
 					{
+						id: 'title',
+						type: 'text',
+						label: lang.captionPlaceholder,
+						setup: function( widget ) {
+							this.setValue( widget.data.title );
+						},
+						commit: function( widget ) {
+							widget.setData( 'title', this.getValue() );
+						}
+					},
+					{
 						type: 'hbox',
 						widths: [ '25%', '25%', '50%' ],
 						requiredContent: features.dimension.requiredContent,

@@ -339,7 +339,9 @@
 					// This internal is required by the editor.
 					'data-cke-saved-src': this.data.src,
 
-					alt: this.data.alt
+					alt: this.data.alt,
+					// title
+					title: this.data.title
 				} );
 
 				// If shifting non-captioned -> captioned, remove classes
@@ -367,6 +369,7 @@
 						alt: image.getAttribute( 'alt' ) || '',
 						width: image.getAttribute( 'width' ) || '',
 						height: image.getAttribute( 'height' ) || '',
+						title: image.getAttribute( 'title' ) || '',
 
 						// Lock ratio is on by default (#10833).
 						lock: this.ready ? helpers.checkHasNaturalRatio( image ) : true
@@ -1521,7 +1524,7 @@
 					match: centerWrapperChecker( editor )
 				},
 				img: {
-					attributes: '!src,alt,width,height'
+					attributes: '!src,alt,width,height,title'
 				},
 				figure: {
 					classes: '!' + editor.config.image2_captionedClass
