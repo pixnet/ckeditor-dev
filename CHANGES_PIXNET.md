@@ -2,6 +2,10 @@ PIXNET CKEditor Changelog
 ====================
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
 
+## pixnet-0.1.0
+* 升級 CKEditor 至 4.6.0
+* 修正中文按下 shift + enter 後無法正常打字的問題（CKEeditor 票號 #12597）
+
 ## pixnet-0.0.15
 * 修改 uploadimage/plugin.js，計算上傳圖片的寬高一定為 interger
 
