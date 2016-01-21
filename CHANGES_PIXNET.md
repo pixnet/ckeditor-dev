@@ -5,6 +5,8 @@ PIXNET CKEditor Changelog
 ## pixnet-0.0.14
 * 新增 [image2](http://ckeditor.com/addon/image2) plugin
 * 修改 image2 plugin，增加可編輯圖片標題
+* 修改 uploadimage/plugin.js，拖拉上傳圖片的寬高最大邊設定不超過 600px
+* 修改 uploadimage/plugin.js，在 onUploaded function 中 fire change event，使前台可以抓到 onChange event。
 
 ## pixnet-0.0.13
 * 更新 skin/moono/editor.css 的 .cke_button__addimages_icon (PIXNET 新增圖片) 位置
