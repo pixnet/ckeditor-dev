@@ -62,7 +62,7 @@
 					this.replaceWith( '<img src="' + upload.url + '" ' +
 						'width="' + sizes.width + '" ' +
 						'height="' + sizes.height + '">' );
-					// fire image finidhs uploaded
+					// fire change event when image finish uploaded
 					editor.fire( 'change' );
 				}
 			});
@@ -80,10 +80,10 @@
 				// width is larger than height
 				if (oW > oH) {
 					values.width = maxSize;
-					values.height = oH * (maxSize / oW);
+					values.height = parseInt(oH * (maxSize / oW));
 				} else {
 					values.height = maxSize;
-					values.width = oW * (maxSize / oH);
+					values.width = parseInt(oW * (maxSize / oH));
 				}
 				return values;
 			}
