@@ -2,6 +2,9 @@ PIXNET CKEditor Changelog
 ====================
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
 
+## pixnet-0.0.15
+* 修改 uploadimage/plugin.js，計算上傳圖片的寬高一定為 interger
+
 ## pixnet-0.0.14
 * 新增 [image2](http://ckeditor.com/addon/image2) plugin
 * 修改 image2 plugin，增加可編輯圖片標題
