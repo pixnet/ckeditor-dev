@@ -62,6 +62,8 @@
 					this.replaceWith( '<img src="' + upload.url + '" ' +
 						'width="' + sizes.width + '" ' +
 						'height="' + sizes.height + '">' );
+					// fire image finidhs uploaded
+					editor.fire( 'change' );
 				}
 			});
 
