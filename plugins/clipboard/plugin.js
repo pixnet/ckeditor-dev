@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
@@ -2646,7 +2646,7 @@
  * `style` and `class`) will be kept.
  * * `'h1 h2 p div'` &ndash; Custom rules compatible with {@link CKEDITOR.filter}.
  * * `null` &ndash; Content will not be filtered by the paste filter (but it still may be filtered
- * by [Advanvced Content Filter](#!/guide/dev_advanced_content_filter)). This value can be used to
+ * by [Advanced Content Filter](#!/guide/dev_advanced_content_filter)). This value can be used to
  * disable the paste filter in Chrome and Safari, where this option defaults to `'semantic-content'`.
  *
  * Example:
