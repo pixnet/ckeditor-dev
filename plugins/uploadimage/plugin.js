@@ -50,15 +50,41 @@
 				onUploading: function( upload ) {
 					// Show the image during the upload.
 					this.parts.img.setAttribute( 'src', upload.data );
+					// set normal (600px) width and height
+					var sizes = getNormalImgSize(this.parts.img.$.naturalWidth, this.parts.img.$.naturalHeight);
+					this.parts.img.setAttribute( 'width', sizes.width );
+					this.parts.img.setAttribute( 'height', sizes.height );
 				},
 
 				onUploaded: function( upload ) {
+					var sizes = getNormalImgSize(this.parts.img.$.naturalWidth, this.parts.img.$.naturalHeight);
 					// Set width and height to prevent blinking.
 					this.replaceWith( '<img src="' + upload.url + '" ' +
-						'width="' + this.parts.img.$.naturalWidth + '" ' +
-						'height="' + this.parts.img.$.naturalHeight + '">' );
+						'width="' + sizes.width + '" ' +
+						'height="' + sizes.height + '">' );
 				}
-			} );
+			});
+
+			// calculate new image size，make sure max size of image edge is 600px
+			function getNormalImgSize (oW, oH) {
+				var maxSize = 600,
+					values = {
+						width: oW,
+						height: oH
+					};
+				if (!oW || !oH || (oW <= maxSize && oH <= maxSize)) {
+					return values;
+				}
+				// width is larger than height
+				if (oW > oH) {
+					values.width = maxSize;
+					values.height = oH * (maxSize / oW);
+				} else {
+					values.height = maxSize;
+					values.width = oW * (maxSize / oH);
+				}
+				return values;
+			}
 
 			// Handle images which are not available in the dataTransfer.
 			// This means that we need to read them from the <img src="data:..."> elements.
