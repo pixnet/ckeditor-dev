@@ -2,6 +2,9 @@ PIXNET CKEditor Changelog
 ====================
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
 
+## pixnet-0.1.2
+* 增加偵測圖片 Orientation 後，在處理增加圖片 width/height 的部份
+
 ## pixnet-0.1.1
 * 移除 image2 plugin 的 hasCaption ckeckbox （已加標題之圖片）
 
