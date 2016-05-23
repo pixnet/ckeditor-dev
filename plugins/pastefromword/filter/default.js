@@ -1208,7 +1208,7 @@
 		data = data.replace( /style=""/g, '' );
 
 		// Remove the dummy spans ( having no inline style ).
-		data = data.replace( /<span>/g, '' );
+		data = false !== editor.config.pasteFromWordRemoveSpan ? data.replace( /<span>/g, '' ) : data;
 
 		return data;
 	};
@@ -1247,5 +1247,14 @@
  *
  * @since 3.1
  * @cfg {Boolean} [pasteFromWordRemoveStyles=true]
+ * @member CKEDITOR.config
+ */
+
+/**
+ * Whether to remove dummy spans. ( having no inline style )
+ *
+ * config.pasteFromWordRemoveSpan = true;
+ *
+ * @cfg {Boolean} [pasteFromWordRemoveSpan=true]
  * @member CKEDITOR.config
  */
