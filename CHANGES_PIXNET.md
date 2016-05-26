@@ -2,6 +2,9 @@ PIXNET CKEditor Changelog
 ====================
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
 
+## pixnet-0.1.3
+* 新增可以決定是否要刪除 <span> 的設定
+
 ## pixnet-0.1.2
 * 增加偵測圖片 Orientation 後，在處理增加圖片 width/height 的部份
 
