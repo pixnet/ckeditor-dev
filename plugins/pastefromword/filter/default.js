@@ -1208,8 +1208,9 @@
 		data = data.replace( /style=""/g, '' );
 
 		// Remove the dummy spans ( having no inline style ).
-		data = false !== editor.config.pasteFromWordRemoveSpan ? data.replace( /<span>/g, '' ) : data;
-
+		if (false !== editor.config.pasteFromWordRemoveSpan) {
+			data = data.replace( /<span>/g, '' );
+		}
 		return data;
 	};
 } )();
