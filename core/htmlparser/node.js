@@ -40,6 +40,10 @@
 		 * @param {CKEDITOR.htmlParser.node} node The node that will replace this one.
 		 */
 		replaceWith: function( node ) {
+			if (!node) {
+				return;
+			}
+
 			var children = this.parent.children,
 				index = CKEDITOR.tools.indexOf( children, this ),
 				previous = node.previous = this.previous,

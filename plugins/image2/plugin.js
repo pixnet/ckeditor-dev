@@ -333,22 +333,24 @@
 						this.parts.link = this.parts.image.getParent();
 				}
 
-				this.parts.image.setAttributes( {
-					src: this.data.src,
+				if (this.parts.image) {
+					this.parts.image.setAttributes( {
+						src: this.data.src,
 
-					// This internal is required by the editor.
-					'data-cke-saved-src': this.data.src,
+						// This internal is required by the editor.
+						'data-cke-saved-src': this.data.src,
 
-					alt: this.data.alt,
-					// title
-					title: this.data.title
-				} );
+						alt: this.data.alt,
+						// title
+						title: this.data.title
+					} );
 
-				// If shifting non-captioned -> captioned, remove classes
-				// related to styles from <img/>.
-				if ( this.oldData && !this.oldData.hasCaption && this.data.hasCaption ) {
-					for ( var c in this.data.classes )
-						this.parts.image.removeClass( c );
+					// If shifting non-captioned -> captioned, remove classes
+					// related to styles from <img/>.
+					if ( this.oldData && !this.oldData.hasCaption && this.data.hasCaption ) {
+						for ( var c in this.data.classes )
+							this.parts.image.removeClass( c );
+					}
 				}
 
 				// Set dimensions of the image according to gathered data.
@@ -362,10 +364,10 @@
 
 			init: function() {
 				var helpers = CKEDITOR.plugins.image2,
-					image = this.parts.image,
+					image = this.parts.image || new CKEDITOR.dom.element('img'),
 					data = {
 						hasCaption: !!this.parts.caption,
-						src: image.getAttribute( 'src' ),
+						src: image.getAttribute( 'src' ) || '',
 						alt: image.getAttribute( 'alt' ) || '',
 						width: image.getAttribute( 'width' ) || '',
 						height: image.getAttribute( 'height' ) || '',
@@ -477,7 +479,7 @@
 				var classRegex = new RegExp( '^(' + [].concat( captionedClass, alignClasses ).join( '|' ) + ')$' );
 
 				return function() {
-					var classes = this.repository.parseElementClasses( getStyleableElement( this ).getAttribute( 'class' ) );
+					var classes = this.repository.parseElementClasses( getStyleableElement( this ) ? getStyleableElement( this ).getAttribute( 'class' ) : '');
 
 					// Neither config.image2_captionedClass nor config.image2_alignClasses
 					// do not belong to style classes.
@@ -1100,6 +1102,10 @@
 			dimensions = { width: data.width, height: data.height },
 			image = widget.parts.image;
 
+		if (!image) {
+			return;
+		}
+
 		for ( var d in dimensions ) {
 			if ( dimensions[ d ] )
 				image.setAttribute( d, dimensions[ d ] );
@@ -1126,7 +1132,7 @@
 		// Inline widgets don't need a resizer wrapper as an image spans the entire widget.
 		if ( !widget.inline ) {
 			var imageOrLink = widget.parts.link || widget.parts.image,
-				oldResizeWrapper = imageOrLink.getParent(),
+				oldResizeWrapper = imageOrLink ? imageOrLink.getParent() : '',
 				resizeWrapper = doc.createElement( 'span' );
 
 			resizeWrapper.addClass( 'cke_image_resizer_wrapper' );
@@ -1136,7 +1142,7 @@
 
 			// Remove the old wrapper which could came from e.g. pasted HTML
 			// and which could be corrupted (e.g. resizer span has been lost).
-			if ( oldResizeWrapper.is( 'span' ) )
+			if ( oldResizeWrapper && oldResizeWrapper.is( 'span' ) )
 				oldResizeWrapper.remove();
 		} else {
 			widget.wrapper.append( resizer );
