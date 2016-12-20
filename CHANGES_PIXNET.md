@@ -2,6 +2,9 @@ PIXNET CKEditor Changelog
 ====================
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
 
+## pixnet-0.1.5
+* 新增圖片後，樣式不會消失
+
 ## pixnet-0.1.4
 * 排除 \<p data-widget="image"> 內 img 元素為 null 導致的錯誤
 
