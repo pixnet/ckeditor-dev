@@ -25,10 +25,4 @@ tests/plugins/mathjax/_assets/mathjax/**
 
 bender-*.log
 
-dist/Makefile
-dist/adapters/**
-dist/samples/**
-dist/LICENSE.md
-dist/bower.json
-dist/CHANGES.md
-dist/CHANGES_PIXNET.md
+dist/**
