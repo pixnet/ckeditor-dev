@@ -49,7 +49,7 @@ CKEDITOR.plugins.setLang( 'link', 'zh', {
 	selectAnchor: '選取一個錨點',
 	styles: '樣式',
 	tabIndex: '定位順序',
-	target: '目標',
+	target: '開啟方式',
 	targetFrame: '<框架>',
 	targetFrameName: '目標框架名稱',
 	targetPopup: '<快顯視窗>',
