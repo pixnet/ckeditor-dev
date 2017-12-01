@@ -51,6 +51,7 @@ blockquote
 a
 {
 	color: #0782C1;
+	cursor: pointer;
 }
 
 ol,ul,dl
