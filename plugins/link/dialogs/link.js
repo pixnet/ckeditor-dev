@@ -427,16 +427,11 @@
 						type: 'select',
 						id: 'linkTargetType',
 						label: commonLang.target,
-						'default': 'notSet',
+						'default': '_blank',
 						style: 'width : 100%;',
 						'items': [
-							[ commonLang.notSet, 'notSet' ],
-							[ linkLang.targetFrame, 'frame' ],
-							[ linkLang.targetPopup, 'popup' ],
 							[ commonLang.targetNew, '_blank' ],
-							[ commonLang.targetTop, '_top' ],
-							[ commonLang.targetSelf, '_self' ],
-							[ commonLang.targetParent, '_parent' ]
+							[ commonLang.targetSelf, '_self' ]
 						],
 						onChange: targetChanged,
 						setup: function( data ) {
