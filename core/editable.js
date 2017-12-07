@@ -2127,13 +2127,7 @@
 		// Do the same for the first element that will be inserted and preceding <br>.
 		function removeBrsAdjacentToPastedBlocks( nodesData, range ) {
 			var succeedingNode = range.endContainer.getChild( range.endOffset ),
-				precedingNode = range.endContainer.getChild( range.endOffset - 1 ),
-				nextSucceedingNode = range.endContainer.getChild( range.endOffset + 1 );
-
-			// delete br when insertHTML
-			if (nextSucceedingNode && nextSucceedingNode.is('br')) {
-				nextSucceedingNode.remove();
-			}
+				precedingNode = range.endContainer.getChild( range.endOffset - 1 );
 
 			if ( succeedingNode )
 				remove( succeedingNode, nodesData[ nodesData.length - 1 ] );
