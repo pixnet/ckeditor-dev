@@ -2,6 +2,15 @@ PIXNET CKEditor Changelog
 ====================
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
 
+## pixnet-0.1.6
+* 圖片置中時框線符合圖片大小
+* 項目符號依循文字對齊方式
+* 超連結開啟方式文案與項目調整
+* 更清楚提示超連結文字
+* 項目符號按鈕排序調整
+* 調整字型字級文案
+* revert pixnet-0.1.5
+
 ## pixnet-0.1.5
 * 新增圖片後，樣式不會消失
 
