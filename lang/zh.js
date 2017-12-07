@@ -66,7 +66,7 @@ CKEDITOR.lang[ 'zh' ] = {
 		confirmNewPage: '現存的修改尚未儲存，要開新檔案？',
 		confirmCancel: '部份選項尚未儲存，要關閉對話框？',
 		options: '選項',
-		target: '目標',
+		target: '開啟方式',
 		targetNew: '開新視窗 (_blank)',
 		targetTop: '最上層視窗 (_top)',
 		targetSelf: '相同視窗 (_self)',

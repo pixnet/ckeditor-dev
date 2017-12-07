@@ -51,6 +51,7 @@ blockquote
 a
 {
 	color: #0782C1;
+	cursor: pointer;
 }
 
 ol,ul,dl
@@ -60,6 +61,10 @@ ol,ul,dl
 	/* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
 	padding: 0 40px;
 }
+
+ol > li,
+ul > li,
+dl > li { list-style-position: inside; }
 
 h1,h2,h3,h4,h5,h6
 {
