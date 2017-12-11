@@ -33,7 +33,7 @@
 				'.cke_widget_wrapper:hover .cke_widget_editable{' +
 					'outline:2px solid yellow' +
 				'}' +
-				'.cke_widget_wrapper.cke_widget_focused>.cke_widget_element,' +
+				'.cke_widget_wrapper.cke_widget_focused .cke_widget_element,' +
 				// We need higher specificity than hover style.
 				'.cke_widget_wrapper .cke_widget_editable.cke_widget_editable_focused{' +
 					'outline:2px solid #ace' +
@@ -1070,7 +1070,14 @@
 				if ( this.element.data( 'cke-widget-keep-attr' ) == '0' )
 					this.element.removeAttribute( 'data-widget' );
 				this.element.removeAttributes( [ 'data-cke-widget-data', 'data-cke-widget-keep-attr' ] );
-				this.element.removeClass( 'cke_widget_element' );
+
+				// 點擊對象為置中元素的情形, #53859
+                if (this.element.$.tagName === 'IMG') {
+                    this.element.removeClass( 'cke_widget_element' );
+                } else {
+                    this.element.getChild(0).removeClass( 'cke_widget_element');
+                }
+
 				this.element.replace( this.wrapper );
 			}
 
@@ -3344,7 +3351,13 @@
 		}
 
 		widget.wrapper.removeClass( 'cke_widget_new' );
-		widget.element.addClass( 'cke_widget_element' );
+
+		// 點擊對齊左右的情形, #53859
+        if (widget.element.getParent().$.tagName === 'DIV') {
+            widget.element.getChild(0).addClass( 'cke_widget_element');
+        } else {
+            widget.element.addClass( 'cke_widget_element' );
+        }
 
 		widget.on( 'key', function( evt ) {
 			var keyCode = evt.data.keyCode;
