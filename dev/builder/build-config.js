@@ -38,7 +38,6 @@ var CKBUILDER_CONFIG = {
 		clipboard: 1,
 		colorbutton: 1,
 		colordialog: 1,
-		contextmenu: 1,
 		confighelper: 1,
 		dialog: 1,
 		elementspath: 1,
