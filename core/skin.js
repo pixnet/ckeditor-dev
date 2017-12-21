@@ -86,7 +86,7 @@
 				this.icons[ name ] = {
 					path: path,
 					offset: offset || 0,
-					bgsize: bgsize || '16px'
+					bgsize: bgsize || '32px'
 				};
 			}
 		},
@@ -123,7 +123,7 @@
 
 			path = overridePath || ( icon && icon.path ) || '';
 			offset = overrideOffset || ( icon && icon.offset );
-			bgsize = overrideBgsize || ( icon && icon.bgsize ) || '16px';
+			bgsize = overrideBgsize || ( icon && icon.bgsize ) || '32px';
 
 			// If we use apostrophes in background-image, we must escape apostrophes in path (just to be sure). (#13361)
 			if ( path )
