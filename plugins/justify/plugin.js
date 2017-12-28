@@ -156,7 +156,7 @@
 					// Remove any of the alignment classes from the className.
 					var className = cssClassName && ( block.$.className = CKEDITOR.tools.ltrim( block.$.className.replace( this.cssClassRegex, '' ) ) );
 
-					var apply = ( this.state == CKEDITOR.TRISTATE_OFF ) && ( !useComputedState || ( getAlignment( block, true ) != this.value ) );
+					var apply = !useComputedState || getAlignment( block, true );
 
 					if ( cssClassName ) {
 						// Append the desired class name.
