@@ -66,9 +66,10 @@ The COLOR PALETTE section instead is a table with a variable number of cells
    It is a small, square-shaped element which can be selected from the palette. */
 span.cke_colorbox
 {
-	width: 10px;
-	height: 10px;
-	border: #808080 1px solid;
+	width: 14px;
+	height: 14px;
+	border: solid 1px #cdced7;
+	border-radius: 3px;
 	float: left;
 }
 
@@ -80,11 +81,11 @@ span.cke_colorbox
 /* The wrapper of the span.cke_colorbox. It provides an extra border and padding. */
 a.cke_colorbox
 {
+	width: 14px;
+	height: 14px;
 	border: #fff 1px solid;
 	padding: 2px;
 	float: left;
-	width: 12px;
-	height: 12px;
 }
 
 .cke_rtl a.cke_colorbox
@@ -124,4 +125,13 @@ a:active.cke_colormore
 {
 	border: #b6b6b6 1px solid;
 	background-color: #e5e5e5;
+}
+
+.cke_colorauto td { color: #888c89; }
+a.cke_colormore {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #4990e2;
+    border: solid 1px #eaeaea;
+    border-radius: 3px;
 }
