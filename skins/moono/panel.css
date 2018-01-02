@@ -124,7 +124,7 @@ is its visual representation:
 .cke_panel_list
 {
 	list-style-type: none;
-	margin: 3px;
+	margin: 0;
 	padding: 0;
 	white-space: nowrap;
 }
@@ -133,16 +133,14 @@ is its visual representation:
 .cke_panel_listItem
 {
 	margin: 0;
-    padding-bottom: 1px;
 }
 
 /* The child of .cke_panel_listItem. These elements contain spans which are
    to display a real name of the property which is visible for an end-user. */
 .cke_panel_listItem a
 {
-	padding: 3px 4px;
+	padding: 12px 0 12px 11px;
 	display: block;
-	border: 1px solid #fff;
 	color: inherit !important;
 	text-decoration: none;
 	overflow: hidden;
@@ -169,20 +167,24 @@ is its visual representation:
 
 .cke_panel_listItem.cke_selected a
 {
-	border: 1px solid #dedede;
-	background-color: #f2f2f2;
-
+	color: #4990e2 !important;
     box-shadow: 0 0 2px rgba(0,0,0,.1) inset;
+}
+
+.cke_panel_listItem a:hover,
+.cke_panel_listItem a:focus {
+	background-color: #f2f2f2;
 }
 
 .cke_panel_listItem a:hover,
 .cke_panel_listItem a:focus,
 .cke_panel_listItem a:active
 {
-	border-color: #dedede;
-	background-color: #f2f2f2;
+	outline: 0;
+}
 
-    box-shadow: 0 0 2px rgba(0,0,0,.1) inset;
+.cke_panel_listItem a:active > span {
+	color: #4990e2;
 }
 
 .cke_hc .cke_panel_listItem a
