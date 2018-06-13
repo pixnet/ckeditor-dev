@@ -14,7 +14,7 @@
 		onLoad: function() {
 			CKEDITOR.addCss( 'img.cke_iframe' +
 				'{' +
-					'background-image: url(' + CKEDITOR.getUrl( this.path + 'images/placeholder.png' ) + ');' +
+					'background-image: url(' + CKEDITOR.getUrl( this.path + 'images/iframe.svg' ) + ');' +
 					'background-position: center center;' +
 					'background-repeat: no-repeat;' +
 					'border: 1px solid #a9a9a9;' +
