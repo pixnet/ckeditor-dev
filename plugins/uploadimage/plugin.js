@@ -64,13 +64,14 @@
 						var changeWH = 5 <= orientation && 8 >= orientation,
 							width = changeWH ? img.naturalHeight : img.naturalWidth,
 							height = changeWH ? img.naturalWidth : img.naturalHeight,
-							sizes = getNormalImgSize(width, height);
+							sizes = getNormalImgSize(width, height),
+							fileName = (upload.fileName || '').replace(/\.(gif|jpg|jpeg|svg|png)$/i, '');
 						// Set width and height to prevent blinking.
 						that.replaceWith('<img src="' + upload.url + '" ' +
 							'width="' + sizes.width + '" ' +
 							'height="' + sizes.height + '" ' +
-							'alt="' + upload.fileName + '" ' +
-							'title="' + upload.fileName + '">');
+							'alt="' + fileName + '" ' +
+							'title="' + fileName + '">');
 						// fire change event when image finish uploaded
 						editor.fire('change');
 					});
