@@ -68,7 +68,9 @@
 						// Set width and height to prevent blinking.
 						that.replaceWith('<img src="' + upload.url + '" ' +
 							'width="' + sizes.width + '" ' +
-							'height="' + sizes.height + '">');
+							'height="' + sizes.height + '" ' +
+							'alt="' + upload.fileName + '" ' +
+							'title="' + upload.fileName + '">');
 						// fire change event when image finish uploaded
 						editor.fire('change');
 					});
