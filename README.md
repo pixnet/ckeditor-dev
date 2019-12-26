@@ -30,6 +30,30 @@ either build the editor (see below) or use an official release available on the
 
 **新增修改的 CHANGES LOG 請記得更新在 CHANGES_PIXNET.md**
 
+開發注意事項:
+  - 由於在新後台發生 #56118 將非正式發布版本推到正式環境的問題，擬定建議的開發流程如下
+
+  - 在 branch 開發
+	- 編輯器 repository
+	  - 將修正的結果 commit 到 ckeditor-dev repository，make 指令 build 出新的目錄。
+	  - git push 到 branch 上
+
+	- 使用編輯器的 repository (ex. 新後台)
+	  - 在安裝編輯器 repository 的 bower.json，ckeditor-dev 項目加上 branch name 的 hashtag `git@github.com:pixnet/ckeditor-dev.git#ticket56118` 後，推上 alpha site 給需求端測試。
+
+  - master
+	- 編輯器 repository
+	  - ckeditor-dev 分支調整 merge 進 master
+	  - git tag -a [版本號]
+	  - git push --tags
+
+	- 使用編輯器的 repository
+	  - 調整的 branch revert branch name hashtag 的 commit
+	  - merge 到 master
+	  - bower.json ckeditor-dev hashtag 改成新的版本號 `git@github.com:pixnet/ckeditor-dev.git#pixnet-0.2.0`
+	  - 執行 make 確認測試站是否為最新的調整結果。
+	  - deploy 到正式環境。
+
 ## Code Installation
 
 There is no special installation procedure to install the development code.
