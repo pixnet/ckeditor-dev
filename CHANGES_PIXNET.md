@@ -2,6 +2,9 @@ PIXNET CKEditor Changelog
 ====================
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
 
+## pixnet-0.3.4
+* 拖曳圖片到編輯區預設帶 alt, title 為檔案名稱
+
 ## pixnet-0.3.3
 * 更換 iframe plugin 的 placeholder 圖片
 
