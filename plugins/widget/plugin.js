@@ -2884,7 +2884,7 @@
 				var focusedChanged = widgetsRepo.focused !== focused,
 					widget, isDirty;
 
-				widgetsRepo.editor.fire( 'lockSnapshot' );
+				//widgetsRepo.editor.fire( 'lockSnapshot' );
 
 				if ( focusedChanged && ( widget = widgetsRepo.focused ) )
 					blurWidget( widgetsRepo, widget );
