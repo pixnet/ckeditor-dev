@@ -480,10 +480,11 @@
 		 * a given element.
 		 */
 		initOn: function( element, widgetDef, startupData ) {
-			if ( !widgetDef )
+			if ( !widgetDef ) {
 				widgetDef = this.registered[ element.data( 'widget' ) ];
-			else if ( typeof widgetDef == 'string' )
+			} else if ( typeof widgetDef == 'string' ) {
 				widgetDef = this.registered[ widgetDef ];
+			}
 
 			if ( !widgetDef )
 				return null;
