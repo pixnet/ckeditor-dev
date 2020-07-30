@@ -2,6 +2,9 @@ PIXNET CKEditor Changelog
 ====================
 - 修改 css (指的是在指定 skins 裡面的檔案，ex: 修改 editor.css 等於修改 skin/moono/editor.css)
 
+## pixnet-0.3.5
+* initOn 加入錯誤處理，避免元素為 null 導致的錯誤
+
 ## pixnet-0.3.4
 * 拖曳圖片到編輯區預設帶 alt, title 為檔案名稱
 
