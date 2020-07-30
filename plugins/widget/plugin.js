@@ -481,6 +481,9 @@
 		 */
 		initOn: function( element, widgetDef, startupData ) {
 			if ( !widgetDef ) {
+				if (!element) {
+					return null;
+				}
 				widgetDef = this.registered[ element.data( 'widget' ) ];
 			} else if ( typeof widgetDef == 'string' ) {
 				widgetDef = this.registered[ widgetDef ];
